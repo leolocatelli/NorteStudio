@@ -1,0 +1,801 @@
+:root {
+    --color-primary: #1a1a1b;
+    --color-secondary: #b62327;
+    --color-glow: #ea575c;
+    --color-text: #ffffff;
+    --color-text-secondary: #444444;
+    --color-background: #151515;
+
+
+    --font-size-nav: 14px;
+    --font-size-nav-menu: 1.5rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-background);
+    margin-top: 90px;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+/* ------------------------NAVIGATION----------------------- */
+
+.mobile {
+    display: none;
+    position: relative;
+    z-index: 1;
+}
+
+.menu-norte-nav {
+    background-color: var(--color-primary);
+    max-height: 90px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+}
+
+nav {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    text-align: center;
+    padding: 30px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;        
+}
+
+li,
+li img,
+a {
+    cursor: pointer;
+}
+
+li {
+    margin: 0 50px;
+    position: relative;
+}
+
+li img {
+    max-width: 130px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: normal;
+    font-size: var(--font-size-nav);
+}
+
+a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -3px;
+    background-color: var(--color-secondary);
+    transition: width 0.4s ease-out;
+}
+
+a:hover::before {
+    width: 100%;
+}
+
+a.no-border::before {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+
+/* ------------------------LEAD----------------------- */
+
+.hero {
+    background-color: var(--color-background);
+
+    margin: 150px 20px 80px 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    z-index: 0;
+}
+
+.text-reel {
+    max-width: 400px;
+    max-height: 168px;
+    color: var(--color-text);
+    font-size: 2rem;
+    line-height: .99;
+    position: absolute;
+    top: 29%;
+    right: 63%;
+    border-bottom: solid 8px var(--color-secondary);
+}
+
+.video-reel {
+    width: 800px;
+    height: 444px;
+    margin-left: 20%;
+}
+
+.sub-text {
+    color: var(--color-text-secondary);
+    text-align: center;
+    max-width: 550px;
+    margin-top: 40px;
+}
+
+.nossos-clientes {
+    width: 600px;
+    max-width: 100%;
+    margin-top: 15px;
+}
+
+.nossos-clientes img {
+    width: 100%;
+    height: auto;
+}
+
+/* ------------------------Infos-Meio----------------------- */
+
+.info-M {
+    background-color: var(--color-primary);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.info-M p {
+    color: var(--color-text);
+    max-width: auto;
+    text-align: center;
+    margin: 50px 0;
+    width: 50vw;
+}
+
+.info-m-trio {
+    display: flex;
+    gap: 1.5vw;
+}
+
+.trio p {
+    max-width: fit-content;
+}
+
+.trio {
+    background-color: var(--color-background);
+    height: 60vh;
+    width: 20vw;
+    transition: all ease-in-out .5s;
+    padding: 0 20px;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.trio img {
+    max-width: 50%;
+    transition: all ease-in-out .5s;
+}
+
+.trio:hover {
+    background-color: var(--color-secondary);
+    border: solid 1px var(--color-glow);
+    box-shadow: 0 0 10px rgba(218, 16, 16, 12);
+    transform: scale(1.01);
+}
+
+.trio:hover img {
+    filter: brightness(0) invert(1) grayscale(100%) brightness(8);
+}
+
+/* ------------------------Nossos-Trabalhos----------------------- */
+
+.nossos-trabalhos {
+    background-color: var(--color-background);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 40px 0 70px 0;
+}
+
+.nossos-trabalhos h1,
+.nossas-atuacoes h1,
+.contato h1 {
+    color: var(--color-text);
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+
+
+.portfolio {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.portfolio p {
+    color: var(--color-text);
+    margin-bottom: 20px;
+}
+
+.trabalho1 {
+    background-color: var(--color-secondary);
+    border-radius: 20px;
+    width: 50vh;
+    height: 26vh;
+    margin-bottom: 40px;
+}
+
+
+/* ------------------------Nossas-Atuacoes----------------------- */
+
+.nossas-atuacoes {
+    background-color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: var(--color-text);
+    padding: 40px;
+}
+
+
+.bloco-atuacoes {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* text-align: center; */
+}
+
+.nossas-atuacoes h2 {
+    color: var(--color-secondary);
+    font-size: 2.3rem;
+    font-weight: 600;
+}
+
+.titulo-atuacoes {
+    font-weight: 100;
+    margin: 0;
+}
+
+.nossas-atuacoes p {
+    max-width: 60vw;
+    text-align: start;
+    margin: 0;
+    line-height: 1.8;
+}
+
+
+.orcamento-botao {
+    padding: 15px;
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+    text-decoration: none;
+    border-radius: 10px;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+.orcamento-botao:hover {
+    padding: 15px;
+    background-color: var(--color-text);
+    color: var(--color-secondary);
+    text-decoration: none;
+    border-radius: 15px;
+    /* box-shadow: 2px 5px 10px var(--color-text-secondary); */
+    border: solid 1px var(--color-text-secondary);
+}
+
+/* ------------------------Orcamentos----------------------- */
+
+
+.orcamentos {
+    background-color: var(--color-text);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: var(--color-text);
+    padding: 40px;
+}
+
+.orcamentos p {
+    color: var(--color-primary);
+}
+
+
+.form-titulo {
+    color: var(--color-primary);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.orcamentos h1 {
+    color: var(--color-primary);
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+form {
+    border-radius: 10px;
+    color: var(--color-primary);
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form button {
+    max-width: 9vw;
+
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--color-background);
+}
+
+input,
+textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--color-text);
+    border-radius: 5px;
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+textarea {
+    height: 30vh;
+}
+
+/* ------------------------Contatos----------------------- */
+
+.contato {
+    background-color: var(--color-background);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: var(--color-text);
+    padding: 40px;
+}
+
+.contato-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 90px;
+}
+
+.informacoes {
+    width: 40vw;
+    height: auto;
+}
+
+.socios-prop{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.socios {
+    position: relative;
+    height: 500px;
+    width: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: hidden; /* Adicionado para esconder o texto que estiver fora da área da div */
+}
+
+.texto-socios {
+    position: absolute;
+    text-align: center;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    color: var(--color-text);
+    transition: all ease-in-out .5s;
+    font-size: 1.3rem;}
+
+.socios:hover .texto-socios {
+    opacity: 1;
+    
+}
+
+
+/* 
+.socios:nth-child(1) {
+    background-image: url('./images/Gabriel_Norte.jpg');
+}
+
+.socios:nth-child(2) {
+    background-image: url('./images/Rafael_Norte.jpg');
+} */
+
+
+
+.Gabriel-01 {
+    background-image: url('./images/Gabriel_Norte.jpg');
+}
+
+.Rafael-02 {
+    background-image: url('./images/Rafael_Norte.jpg');
+}
+
+
+
+.redes-sociais{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.redes-sociais img{
+    filter: brightness(0) invert(1) grayscale(100%) brightness(8);
+    max-width: 30px;
+    height: auto;
+}
+
+.polaris-img{
+    width: 20vw;
+    height: auto;
+}
+/* ------------------------Footer----------------------- */
+
+footer{
+    background-color: var(--color-secondary);
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-text);
+    font-size: small;
+}   
+
+footer p {
+    max-width: 70vw;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer img {
+    max-width: 40px;
+    text-align: center;
+    filter: brightness(0) invert(1) grayscale(100%) brightness(1);
+
+}
+
+.contato-wpp:hover{
+color: var(--color-secondary);
+}
+
+
+
+/* ------------------------Pagina Obrigado----------------------- */
+.hero-thanks {
+    background-color: var(--color-text);
+    margin: 150px 20px 80px 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    z-index: 0;
+    height: 60vh;
+}
+
+.thanks-message, .thanks-message a {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#whatsapp-icon {
+    position: fixed;
+    bottom: -5px;
+    right: -10px;
+    width: 100px;
+    height: 100px;
+    /* background-color: green; Altere a cor conforme necessário */
+    /* border-radius: 50%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /* box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2); Adiciona uma sombra suave */
+    z-index: 9;
+   
+  }
+
+  #whatsapp-icon img {
+    width: 70%; /* Ajuste o tamanho da imagem conforme necessário */
+  }
+
+/* ------------------------TAB----------------------- */
+
+
+@media screen and (max-width: 1024px) {
+
+    .polaris-img{
+        width: 40vw;
+        height: auto;
+    }
+
+    .informacoes {
+        width: 90vw;
+        height: auto;
+    }
+
+
+    .maps{
+        width: fit-content;
+        height: auto;
+    }
+    .text-reel {
+        max-height: 65px;
+        color: var(--color-text);
+        font-size: 1.1rem;
+        line-height: 1.5;
+        border-bottom: solid 4px var(--color-secondary);
+    }
+
+    .hero {
+        position: static;
+        overflow: hidden;
+        justify-content: initial;
+        margin: 10px 20px;
+    }
+
+    .text-reel,
+    .video-reel,
+    .sub-text {
+        margin: 20px 10px;
+        position: static;
+        text-align: center;
+    }
+
+    .sub-text {
+        color: var(--color-text-secondary);
+        text-align: center;
+    }
+
+    .info-m-trio {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .trio {
+        background-color: var(--color-background);
+        height: 24vh;
+        width: 64vw;
+        flex-direction: row;
+    }
+
+    .trio img {
+        max-width: 15%;
+        padding-right: 10px;
+    }
+
+    .info-M p {
+        width: 80%;
+    }
+
+    form {
+        width: 80vw;
+    }
+
+    form button {
+        max-width: 90vw;
+        /* margin: auto; */
+    }
+}
+
+
+
+
+/* ------------------------NAVIGATION MOBILE----------------------- */
+
+@media screen and (max-width: 668px) {
+    nav {
+        background-color: transparent;
+    }
+
+    ul {
+        align-items: end;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .mobile img {
+        display: block;
+        align-items: flex-start;
+        max-width: 130px;
+        max-height: 33px;
+    }
+
+    .menu-icon-drop,
+    .menu-icon {
+        display: flex;
+        flex-direction: column;
+        text-align: end;
+    }
+
+    .menu-icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: var(--font-size-nav-menu);
+        color: var(--color-text);
+        padding-right: 10px;
+    }
+
+    .mobile ul {
+        display: none;
+        flex-direction: column;
+        text-align: end;
+        align-items: end;
+        background-color: var(--color-primary);
+        padding: 10px;
+    }
+
+    .mobile ul.show {
+        display: flex;
+        align-items: center;
+        padding: 20px 10px;
+    }
+
+    .mobile li {
+        margin: 10px 0;
+    }
+
+    /* ------------------------LEAD MOBILE----------------------- */
+
+    .hero {
+        position: static;
+    }
+
+    .text-reel {
+        max-height: 50px;
+        color: var(--color-text);
+        font-size: .8rem;
+        line-height: 1.1;
+        border-bottom: solid 4px var(--color-secondary);
+    }
+
+    .text-reel,
+    .video-reel,
+    .sub-text {
+        width: auto;
+        height: auto;
+        margin: 15px;
+        position: static;
+        text-align: center;
+    }
+
+    /* ------------------------INFO MEIO MOBILE----------------------- */
+
+    .trio {
+        background-color: var(--color-background);
+        transition: all ease-in-out .5s;
+        padding: 0 20px;
+    }
+
+    .trio p {
+        width: fit-content;
+        padding: auto;
+        margin: auto;
+        text-align: left;
+        justify-content: center;
+    }
+
+    .info-M p {
+        width: 100%;
+    }
+
+    .trio img {
+        max-width: 10vh;
+    }
+
+    .info-m-trio p {
+        font-size: 2.5vw;
+    }
+
+    .polaris-img{
+        width: 80vw;
+        height: auto;
+    }
+
+    .socios{
+        height: 20vh;
+        width: 35vw;
+        background-color: var(--color-text-secondary);
+    }
+
+    .contato-div{
+        margin-bottom: 20px;
+    }
+
+    .socios-prop{
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        margin-bottom: 60px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .contato-wpp {
+   max-width: 100px;
+   text-align: center;
+    }
+    
+    .socios{
+        height: 200px;
+        width: 200px;
+        background-size:cover; 
+    }
+
+    .socios:hover .texto-socios {
+        opacity: 0;
+        
+    }
+
+    .viclimekit{
+        width: 200px;
+    }
+
+
+}
